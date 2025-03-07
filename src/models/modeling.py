@@ -12,18 +12,6 @@ class ImageEncoder(torch.nn.Module):
         print(f'Loading {args.model} pre-trained weights from {args.pretrained_model} checkpoint.')
         if '__pretrained__' in args.model:
             name, pretrained = args.model.split('__pretrained__')
-        elif args.pretrained_model == 'DataComp':
-            name = args.model
-            pretrained = f'/data1/common_datasets/shared_weight/task_vector/{name}_DataComp/open_clip_pytorch_model.bin'
-        elif args.pretrained_model == 'DFN2B':
-            name = args.model
-            pretrained = f'/data1/common_datasets/shared_weight/task_vector/{name}_DFN2B/open_clip_pytorch_model.bin'
-        elif args.pretrained_model == 'laion2b':
-            name = args.model
-            pretrained = f'/data1/common_datasets/shared_weight/task_vector/{name}_laion2b/open_clip_pytorch_model.bin'
-        elif args.pretrained_model == 'laion400m':
-            name = args.model
-            pretrained = f'/data1/common_datasets/shared_weight/task_vector/{name}_laion400m/open_clip_pytorch_model.bin'
         else:
             name = args.model
             pretrained = args.pretrained_model

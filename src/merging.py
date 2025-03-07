@@ -15,8 +15,7 @@ from src.models.heads import get_classification_head
 from src.models.modeling import ImageEncoder
 from src.models.task_vectors import TaskVector
 from src.utils import is_TA_mode, get_dir_dict, garbage_collect
-from src.logger import ExperimentResult, csv_logger, yaml_logger
-from src.merge_method import emr_merge, emr_apply_vector
+from src.logger import ExperimentResult
 
 from typing import List, Optional, Union, Dict
 

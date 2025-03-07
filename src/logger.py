@@ -136,24 +136,3 @@ class ExperimentResult:
 
         return base
 
-
-def csv_logger(exp_result: ExperimentResult, exp_name: str):
-    df = pd.DataFrame([exp_result.to_dict()])
-    os.makedirs("/workspace/results/merge_all", exist_ok=True)
-    exp_dir = os.path.join("/workspace/results/merge_all")
-    os.makedirs(exp_dir, exist_ok=True)
-    df.to_csv(os.path.join(exp_dir, f"{exp_name}.csv"), index=False)
-
-
-def yaml_logger(exp_result: ExperimentResult, exp_name: str) -> str:
-    result_dict = exp_result.to_dict()
-    os.makedirs("/workspace/results/merge_all", exist_ok=True)
-    exp_dir = os.path.join("/workspace/results/merge_all")
-    os.makedirs(exp_dir, exist_ok=True)
-    os.makedirs(os.path.join(exp_dir, "yaml"), exist_ok=True)
-    save_path = os.path.join(exp_dir, "yaml", f"{exp_name}.yaml")
-    with open(save_path, "w") as f:
-        yaml.dump(result_dict, f)
-    return save_path
-
-

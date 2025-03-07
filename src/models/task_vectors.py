@@ -15,7 +15,7 @@ def make_task_vector_low_rank(args, finetuned_single_weight, pretrained_single_w
     elif any(sub in key for sub in low_rank_substrings):
         U, s, V_T = torch.linalg.svd(diff.to(args.device), full_matrices=False)
         dim = s.shape[0]
-        parsed_dim = max(1, int(args.initial_rank_ratio * dim))  # 최소 1 차원 보장
+        parsed_dim = max(1, int(args.initial_rank_ratio * dim))
 
         sqrt_s = torch.sqrt(s[:parsed_dim])
         parsed_V_T = torch.diag(sqrt_s) @ V_T[:parsed_dim, :]
