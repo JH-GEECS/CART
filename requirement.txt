@@ -1,0 +1,51 @@
+# multiprocessing
+msgpack
+deepspeed
+
+# code refactoring
+autopep8
+
+# data structure
+easydict
+omegaconf
+hydra-core
+
+# debuggers
+ipdb
+ipykernel
+jupyterlab
+jupyter
+ipywidgets
+
+# training tools
+accelerate
+evaluate
+transformers
+datasets
+hf_transfer
+huggingface_hub
+h5py
+gdown
+pytorch-lightning
+scikit-learn
+
+# loggers
+tensorboard
+kaggle
+tqdm
+wandb
+gspread
+gspread-dataframe
+google-auth
+google-api-python-client
+namesgenerator
+
+# analysis tool
+pandas
+seaborn
+
+# baseline cores
+open-clip-torch==2.0.2
+gdown
+
+# model merging
