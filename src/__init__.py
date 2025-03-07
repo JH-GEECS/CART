@@ -1,4 +1,3 @@
-# [1] 서비스 계정 JSON 파일 경로
 import os
 repo_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
