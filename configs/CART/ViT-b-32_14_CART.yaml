@@ -1,0 +1,47 @@
+exp_name: ViT-B-32_14_CART
+model: ViT-B-32
+pretrained_model: openai
+data_location: /workspace/data/
+weight_root: /workspace/weight/checkpoints/ViT-B-32
+save: /workspace/weight/checkpoints/ViT-B-32
+openclip_cachedir: /workspace/weight/checkpoints/ViT-B-32
+device: auto
+tasks:
+  - "Cars"
+  - "DTD"
+  - "EuroSAT"
+  - "GTSRB"
+  - "MNIST"
+  - "RESISC45"
+  - "SUN397"
+  - "SVHN"
+  - "CIFAR100"
+  - "STL10"
+  - "Flowers102"
+  - "OxfordIIITPet"
+  - "PCAM"
+  - "FER2013"
+merge_type: static
+merge_method: CART
+eval_batch_size: 128
+tta_batch_size: 16
+tta_eval_interval: 1000
+tta_steps: 10000
+lr: 0.001
+prior: 1.5
+mask_temp: 1
+normalized_merging_weights: false
+clamp_weights: true
+extend_clamp: false
+initial_rank_ratio: 0.16
+do_whitening: false
+do_adaptive_merging: true
+do_adaptive_rank_pruning: true
+half_precision: false
+spread_name: static
+sheet_name: vision
+initial_merge_rank_ratio: 0.08
+initial_merge_coeff: 1.0
+energy_threshold: false
+TA_mode: False
+external_weight_path: null
