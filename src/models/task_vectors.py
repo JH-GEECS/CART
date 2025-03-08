@@ -50,15 +50,6 @@ class TaskVector():
                 
                 Warning(f"low rank approximation in TaskVector class is deprecated. Please manually do SVD approximation")
                 for key in pretrained_state_dict:
-                #     if pretrained_state_dict[key].dtype in [torch.int64, torch.uint8]:
-                #         continue
-                #     assert args.initial_rank_ratio >= 0.0 and args.initial_rank_ratio <= 1.0, "initial_rank_ratio should be in [0, 1]"
-                #     if args.initial_rank_ratio < 1.0:
-                #         self.vector[key] = make_task_vector_low_rank(
-                #             args, finetuned_state_dict[key], pretrained_state_dict[key], key)
-                #     else:
-                #         self.vector[key] = finetuned_state_dict[key] - \
-                #             pretrained_state_dict[key]
                     self.vector[key] = finetuned_state_dict[key] - pretrained_state_dict[key]
 
     def to(self, device):
@@ -73,13 +64,10 @@ class TaskVector():
             all_keys = set(self.vector.keys()).union(set(other.vector.keys()))
             for key in all_keys:
                 if key in self.vector and key in other.vector:
-                    # 같은 키는 합침
                     new_vector[key] = self.vector[key] + other.vector[key]
                 elif key in self.vector:
-                    # self.vector에만 있는 키
                     new_vector[key] = self.vector[key]
                 else:
-                    # other.vector에만 있는 키
                     new_vector[key] = other.vector[key]
         return TaskVector(vector=new_vector)
 
