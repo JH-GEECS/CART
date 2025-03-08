@@ -7,7 +7,7 @@ pip install -r requirement.txt
 - please place finetuend weights to `/workspace/weight/` following https://github.com/nik-dim/tall_masks
 
 # Datasets
-- please place propely processed datasets to `/workspace/data` following https://github.com/nik-dim/tall_masks
+- please place propely processed datasets to `/workspace/data/` following https://github.com/nik-dim/tall_masks
 
 # run script
 ```bash
