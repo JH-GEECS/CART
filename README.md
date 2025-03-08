@@ -3,7 +3,7 @@
 ```bash
 pip install -r requirement.txt
 ```
-# weight
+# Finetuned weight
 - please place finetuend weights to `/workspace/weight/` following https://github.com/nik-dim/tall_masks
 
 # Datasets
