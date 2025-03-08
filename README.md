@@ -5,8 +5,10 @@ pip install -r requirement.txt
 ```
 # weight
 - please place finetuend weights to `/workspace/weight/` following https://github.com/nik-dim/tall_masks
-```bash
-```
+
+# Datasets
+- please place propely processed datasets to `/workspace/data` following https://github.com/nik-dim/tall_masks
+
 # run script
 ```bash
 # 8 tasks with CLIP ViT-B/32
