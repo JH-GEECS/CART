@@ -86,7 +86,7 @@ class ExperimentResult:
             if control is not None:
                 return self.scores.get(task, {}).get(control, None)
             else:
-                return self.scores.get(task, None)  # target_task에 대해서 전체 반환
+                return self.scores.get(task, None)
         else:
             return self.scores.get(task, None)
 
