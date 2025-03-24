@@ -2,6 +2,7 @@
 
 TL;DR:  By centering task vectors and applying low-rank approximations, our method effectively merges fine-tuned models for multi-task learning, significantly reducing inter-task interference and nearly matching traditional multi-task performance.
 
+Multi-Task Performances on 8, 14 and 20 vision tasks with merged ViT-B/32 and ViT-L/14.
 | **Method**                      | **ViT-B/32** |              |              | **ViT-L/14** |              |              |
 |---------------------------------|--------------|--------------|--------------|--------------|--------------|--------------|
 |                                 | **8 tasks**  | **14 tasks** | **20 tasks** | **8 tasks**  | **14 tasks** | **20 tasks** |
@@ -17,6 +18,7 @@ TL;DR:  By centering task vectors and applying low-rank approximations, our meth
 | Adamerging+TA                   | 80.1         | 76.7         | 69.2         | 90.8         | 88.0         | 86.8         |
 | **Adamerging+CART (Ours)**      | **85.8**     | **82.3**     | **82.7**     | **93.1**     | **90.4**     | **91.3**     |
 
+paper link: [Arxiv](https://arxiv.org/abs/2412.12153)
 
 ## Requirements
 
