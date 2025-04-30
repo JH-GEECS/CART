@@ -1,5 +1,7 @@
 # Revisiting Weight Averaging for Model Merging
 
+Official Implementation of [CART](https://arxiv.org/abs/2412.12153)
+
 TL;DR:  By centering task vectors and applying low-rank approximations, our method (CART) effectively merges fine-tuned models for multi-task learning, significantly reducing inter-task interference and nearly matching traditional multi-task performance.
 
 Multi-Task Performances on 8, 14 and 20 vision tasks with merged ViT-B/32 and ViT-L/14.
