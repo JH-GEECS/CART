@@ -1,8 +1,12 @@
 # Revisiting Weight Averaging for Model Merging
 
-Official Implementation of [CART](https://arxiv.org/abs/2412.12153)
+This is the official implementation of CART: [Revisiting Weight Averaging for Model Merging](https://arxiv.org/abs/2412.12153).
 
-TL;DR:  By centering task vectors and applying low-rank approximations, our method (CART) effectively merges fine-tuned models for multi-task learning, significantly reducing inter-task interference and nearly matching traditional multi-task performance.
+## Abstract
+_Model merging aims to build a multi-task learner by combining the parameters of individually fine-tuned models without additional training. While a straightforward approach is to average model parameters across tasks, this often results in suboptimal performance due to interference among parameters across tasks. In this paper, we present intriguing results that weight averaging implicitly induces task vectors centered around the weight averaging itself and that applying a low-rank approximation to these centered task vectors significantly improves merging performance. Our analysis shows that centering the task vectors effectively reduces task interference and most of task-specific knowledge is concentrated in the top singular vectors. Our method demonstrates robust and scalable performance on vision benchmarks across varying numbers of tasks and model sizes. Furthermore, we observe that our approach is applicable to natural language processing tasks with competitive performance._
+
+---
+![image](https://github.com/user-attachments/assets/872bad81-608a-403e-911c-06225d89722d)
 
 Multi-Task Performances on 8, 14 and 20 vision tasks with merged ViT-B/32 and ViT-L/14.
 | **Method**                      | **ViT-B/32** |              |              | **ViT-L/14** |              |              |
@@ -20,7 +24,7 @@ Multi-Task Performances on 8, 14 and 20 vision tasks with merged ViT-B/32 and Vi
 | Adamerging+TA                   | 80.1         | 76.7         | 69.2         | 90.8         | 88.0         | 86.8         |
 | **Adamerging+CART (Ours)**      | **85.8**     | **82.3**     | **82.7**     | **93.1**     | **90.4**     | **91.3**     |
 
-paper link: [Arxiv](https://arxiv.org/abs/2412.12153)
+
 
 ## Requirements
 
